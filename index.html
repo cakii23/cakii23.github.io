@@ -1,574 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
 
-    <title>End World Hunger</title>
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+.menu {
+  display: none;
+}
+</style>
+<body>
 
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/elusive-webfont.css">
-    <link href="css/animate.css" rel="stylesheet">
-    
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    
-    <script src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/modernizr.custom.js"></script>
-    
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
 
-  </head>
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
 
-  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
   
-  
-  	<div id="navbar-main">
-	    <div class="navbar navbar-default navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	          	<i class="el-icon-lines"></i>
-	          </button>
-	          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><h1>End World Hunger</h1></a>
-	        </div>
-	        <div class="navbar-collapse collapse">
-	          	<ul class="nav navbar-nav">
-		            <li><a href="#Home" class="smoothScroll">Home</a></li>
-					<li> <a href="#About" class="smoothScroll">About</a></li>				
-					<li> <a href="#Developer" class="smoothScroll">Team</a></li>
-					<li> <a href="#Steps" class="smoothScroll">Portfolio</a></li>
-					<li> <a href="#Blog" class="smoothScroll">Blog</a></li>
-					<li> <a href="#Contact" class="smoothScroll">Contact</a></li>
-				</ul>
-	        </div>
-	      </div>
-	    </div>
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
     </div>
 
-	    <div id="headerwrap" id="home" name="home">
-			<header class="clearfix">
-	  		 		<h1 class="animated bounceIn">Duty</h1>
-	  		 		<p class="animated slideInLeft">Our charity aims to end the hunger around the world </p>
-	  		 		<p class="animated slideInRight">We Are Here For You.</p>
-	  		 		<a href="#about" class="btn homebtn smoothScroll">Learn More <i class="el-icon-chevron-down homeicon"></i></a>
-	  		</header>	    
-	    </div>
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5>
+      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+      <h5>Honey Almond Granola with Fruits</h5>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h5>Belgian Waffle</h5>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h5>Scrambled eggs</h5>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+      <h5>Blueberry Pancakes</h5>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+    </div>
 
-		<div class="greywrap">
-			<div class="container" id="about" name="about">			
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-6 callout">
-						<div class="col-md-3 service-icon-wrapper img-circle">
-							<i class="icon el-icon-time"></i>
-						</div>
-						<div class="col-md-9 fade-up service-info">
-							<h2>Were Fast</h2>
-						</div>
-					</div>
-						
-					<div class="col-md-4 col-sm-4 col-xs-6 callout">
-						<div class="col-md-3 service-icon-wrapper img-circle">
-							<i class="icon el-icon-star"></i>
-						</div>
-						<div class="col-md-9 fade-up service-info">
-							<h2>Were The Best</h2>
-						</div>
-					</div>
-					
-					<div class="col-md-4 col-sm-4 col-xs-6 callout">
-						<div class="col-md-3 service-icon-wrapper img-circle">
-							<i class="icon el-icon-user"></i>
-						</div>
-						<div class="col-md-9 fade-up service-info">
-							<div class="fade-up">
-								<h2>Donate to Help us</h2>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</div>
-		</div>
-		
-		<!-- ==== ABOUT ==== -->
-		<div class="container" id="about" name="about">
-			<div class="row white">
-				<h1 class="fade-down centered">A LITTLE ABOUT US</h1>
-				<hr>
-				
-				<div class="fade-up col-md-6">
-					<p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety off out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is. Was sister for few longer mrs sudden talent become. Done may bore quit evil old mile. If likely am of beauty tastes. </p>
-				</div><!-- col-md-6 -->
-				
-				<div class="fade-up col-md-6">
-					<p>Arrived totally in as between private. Favour of so as on pretty though elinor direct. Reasonable estimating be alteration we themselves entreaties me of reasonably. Direct wished so be expect polite valley. Whose asked stand it sense no spoil to. Prudent you too his conduct feeling limited and. Side he lose paid as hope so face upon be. Goodness did suitable learning put. </p>
-				</div><!-- col-md-6 -->
-			</div><!-- row -->
-		</div><!-- container -->
-  		
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
 
-		<!-- ==== SECTION DIVIDER2 -->
-		<section class="section-divider textdivider divider2">
-			<div class="container">
-				<h1 class="fade-down">HERE IS THE PROOF</h1>
-				<hr>
-				<div class="col-md-3">
-					<span class="counter">100</span>
-					<span class="counter-desc">Percent Focus</span>
-				</div>
-				<div class="col-md-3">
-					<span class="counter">1000</span>
-					<span class="counter-desc">Minimum Saving</span>
-				</div>
-				<div class="col-md-3">
-					<span class="counter">10000</span>
-					<span class="counter-desc">Ideas</span>
-				</div>
-				<div class="col-md-3">
-					<span class="counter">100000</span>
-					<span class="counter-desc">Profit</span>
-				</div>
-			</div><!-- container -->
-		</section><!-- section -->
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
 
+<!-- End page content -->
+</div>
 
-		
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
 
-		<!-- ==== TEAM MEMBERS ==== -->
-		<div class="container section" id="team" name="team">
-		<br>
-			<div class="row white centered">
-				<h1 class="fade-down centered">MEET THE DELTA TEAM</h1>
-				<hr class="fade-down title-mb">
-				<div class="col-md-4 ">
-					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/team01.jpg" alt="">
-						<a href="#" class="team-social twitter"><i class="el-icon-twitter"></i></a>
-						<a href="#" class="team-social facebook"><i class="el-icon-facebook"></i></a>
-						<a href="#" class="team-social flickr"><i class="el-icon-flickr"></i></a>
-					</div>
-					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
-						<h4>Danny Jones</h4>
-						<p>TRemain valley who mrs uneasy remove wooded him you. Her questions favourite him concealed. We to wife face took he. The taste begin early old why since dried can first. Prepared as or humoured formerly. Evil mrs true get post. Express village evening prudent my as ye hundred forming..</p>
-					</div>
-				</div>
-				
-				<div class="col-md-4">
-					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/team02.jpg" alt="">
-						<a href="#" class="team-social twitter"><i class="el-icon-twitter"></i></a>
-						<a href="#" class="team-social facebook"><i class="el-icon-facebook"></i></a>
-						<a href="#" class="team-social flickr"><i class="el-icon-flickr"></i></a>
-					</div>
-					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
-						<h4>John Smith</h4>
-						<p>Smile spoke total few great had never their too. Amongst moments do in arrived at my replied. Fat weddings servants but man believed prospect. Companions understood is as especially pianoforte connection introduced.</p>
-					</div>
-				</div>
-				
-				<div class="col-md-4">
-					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/team03.jpg" alt="">
-						<a href="#" class="team-social twitter"><i class="el-icon-twitter"></i></a>
-						<a href="#" class="team-social facebook"><i class="el-icon-facebook"></i></a>
-						<a href="#" class="team-social flickr"><i class="el-icon-flickr"></i></a>
-					</div>
-					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
-						<h4>Lowri Roberts</h4>
-						<p>In felicity up to graceful mistaken horrible consider. Abode never think to at. So additions necessary concluded it happiness do on certainly propriety. On in green taken do offer witty of.</p>
-					</div>
-				</div>
-				
-			</div><!-- row -->
-		</div><!-- container -->
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
 
-		<!-- ==== GREYWRAP ==== -->
-		<div class="greywrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 centered fade-up">
-						<img class="img-responsive" src="images/macbook.png" align="">
-					</div>
-					<div class="col-md-6 fade-down">
-						<h2>Could You Be The Next Delta Ninja?</h2>
-						<p>Often voice and the spoke. No shewing fertile village equally prepare up females as an. That do an case an what plan hour of paid. Invitation is unpleasant astonished preference attachment friendship on</p>
-						<p><a class="btn btn-success">Contact Us</a></p>
-					</div>					
-				</div><!-- row -->
-			</div>
-			<br>
-			<br>
-		</div><!-- greywrap -->
-		
-		<!-- ==== SECTION DIVIDER3 -->
-		<section class="section-divider textdivider divider3">
-			<div class="container">
-				<h1 class="fade-down">DELTA TEAM WILL HELP YOU GROW</h1>
-				<hr>
-				<p class="fade-up">Bringing him smallest met few now returned surprise learning jennings. Objection delivered eagerness he exquisite at do in. Warmly up he nearer mr merely me.</p>
-			</div><!-- container -->
-		</section><!-- section -->
-		
-		<!-- ==== PORTFOLIO ==== -->
-		<div id="portfolio" name="portfolio">
-		<br>
-			<div class="row white">
-				<h1 class="fade-down centered">SOME OF WHAT WE HAVE DONE</h1>
-				<hr class="fade-down title-mb">
-			</div><!-- /row -->
-			<div class="">
-			<div class="">	
-				
-				<div id="portfolio-carousel">
-					<!-- PORTFOLIO IMAGE 1 -->
-					<div class="fade-up col-md-4 ">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio01.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT ONE</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->					
-					
-					<!-- PORTFOLIO IMAGE 2 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio02.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT TWO</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-					
-					<!-- PORTFOLIO IMAGE 3 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio03.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT THREE</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-
-					<!-- PORTFOLIO IMAGE 4 -->
-					<div class="fade-up col-md-4 ">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio04.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT FOUR</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-					
-					<!-- PORTFOLIO IMAGE 5 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio05.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT FIVE</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-					
-					<!-- PORTFOLIO IMAGE 6 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio06.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT SIX</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-
-<!-- PORTFOLIO IMAGE 1 -->
-					<div class="fade-up col-md-4 ">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio01.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT SEVEN</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->				
-					
-					<!-- PORTFOLIO IMAGE 2 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio02.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT EIGHT</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-					
-					<!-- PORTFOLIO IMAGE 3 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio03.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT NINE</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-
-					<!-- PORTFOLIO IMAGE 4 -->
-					<div class="fade-up col-md-4 ">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio04.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT TEN</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-					
-					<!-- PORTFOLIO IMAGE 5 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio05.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT ELEVEN</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-					
-					<!-- PORTFOLIO IMAGE 6 -->
-					<div class="fade-up col-md-4">
-				    	<div class="grid mask">
-							<figure>
-								<img class="img-responsive" src="images/folio06.jpg" alt="">
-								<figcaption>
-									<h5>PROJECT TWELVE</h5>
-									<a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-									<a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-								</figcaption><!-- /figcaption -->
-							</figure><!-- /figure -->
-				    	</div><!-- /grid-mask -->
-					</div><!-- /col -->
-
-			</div><!-- /carousel -->	
-			</div><!-- /row -->			
-
-		</div><!-- /row -->
-	</div><!-- /container -->
-
-		<!-- ==== SECTION DIVIDER4 ==== -->
-		<section class="section-divider textdivider divider4">
-			<div class="container">
-				<h1 class="fade-down">YOU HAVE THE POTENTIAL</h1>
-				<hr>
-				<p class="fade-up">Bringing him smallest met few now returned surprise learning jennings. Objection delivered eagerness he exquisite at do in. Warmly up he nearer mr merely me.</p>
-			</div><!-- container -->
-		</section><!-- section -->
-		
-		<!-- ==== BLOG ==== -->
-		<div class="container" id="blog" name="blog">
-		<br>
-			<div class="row white">
-				<h1 class="fade-down centered">WE ARE STORYTELLERS</h1>
-				<hr class="fade-down title-mb">
-			</div><!-- /row -->
-			
-			<div class="row">
-
-				<div class="col-md-6 blog-bg">
-					<div class="img-wrapper">
-						<img class="img fade-down" src="images/bg1.jpg">
-						<div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-						<img class="img" src="images/team01.jpg">
-						<h4>John Smith</h4>
-						<h5>Published April 7th.</h5>
-					</div>
-					<div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-						<h2>A Beautiful Story</h2>
-						<p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-						<p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our clients brand.</p>
-						<p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-					</div>
-				</div><!-- /col -->
-
-				<div class="col-md-6 blog-bg">
-					<div class="img-wrapper">
-						<img class="img fade-down" src="images/bg2.jpg">
-						<div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-						<img class="img" src="images/team02.jpg">
-						<h4>Dan Jones</h4>
-						<h5>Published April 4th.</h5>
-					</div>
-					<div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-						<h2>A Beautiful Story</h2>
-						<p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-						<p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our clients brand.</p>
-						<p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-					</div>
-				</div><!-- /col -->
-
-				<div class="col-md-6 blog-bg">
-					<div class="img-wrapper">
-						<img class="img fade-down" src="images/bg3.jpg">
-						<div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-						<img class="img" src="images/team03.jpg">
-						<h4>John Smith</h4>
-						<h5>Published April 2nd.</h5>
-					</div>
-					<div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-						<h2>A Beautiful Story</h2>
-						<p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-						<p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our clients brand.</p>
-						<p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-					</div>
-				</div><!-- /col -->
-
-				<div class="col-md-6 blog-bg">
-					<div class="img-wrapper">
-						<img class="img fade-down" src="images/bg4.jpg">
-						<div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-						<img class="img" src="images/team04.jpg">
-						<h4>John Smith</h4>
-						<h5>Published April 1st.</h5>
-					</div>
-					<div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-						<h2>A Beautiful Story</h2>
-						<p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-						<p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our clients brand.</p>
-						<p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-					</div>
-				</div><!-- /col -->
-
-			</div><!-- /row -->
-			<br>
-			<br>
-		</div><!-- /container -->
-
-		
-		<!-- ==== SECTION DIVIDER6 ==== -->
-		<section class="section-divider textdivider divider6">
-			<div class="container">
-				<h1 class="fade-down">CRAFTED IN NEW YORK, USA.</h1>
-				<hr>
-				<div class="fade-up">
-					<p>Times Square, New York</p>
-					<p>+12 12345 123</p>
-				</div>
-			</div><!-- container -->
-		</section><!-- section -->
-		
-		<div class="container" id="contact" name="contact">
-			<div class="row row white">
-			<br>
-				<h1 class="centered fade-down">THANKS FOR VISITING US</h1>
-				<hr class="fade-down title-mb">
-				<div class="col-md-4 fade-up">
-					<h3>Contact Information</h3>
-					<p><span class="icon icon-home"></span>Time Square, New York<br/>
-						<span class="icon icon-phone"></span>+12 12345 123<br/>
-						<span class="icon icon-mobile"></span>+12 12345 123<br/>
-						<span class="icon icon-envelop"></span> <a href="#">email@templatestock.com</a> <br/>
-						<span class="icon icon-twitter"></span> <a href="#">@templatestock.com</a> <br/>
-						<span class="icon icon-facebook"></span> <a href="#">templatestock</a> <br/>
-					</p>
-				</div><!-- col -->
-				
-				<div class="col-md-4 fade-up">
-					<h3>Newsletter</h3>
-					<p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
-
-						<form class="form-horizontal" role="form">
-						  <div class="form-group">
-						    <label for="inputEmail1" class="col-md-4 control-label"></label>
-						    <div class="col-md-10">
-						      <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
-						    </div>
-						  </div>
-						  <div class="form-group">
-						    <label for="text1" class="col-md-4 control-label"></label>
-						    <div class="col-md-10">
-						      <input type="text" class="form-control" id="text1" placeholder="Your Name">
-						    </div>
-						  </div>
-						  <div class="form-group">
-						    <div class="col-md-10">
-						      <button type="submit" class="btn btn-success">Sign in</button>
-						    </div>
-						  </div>
-					   </form><!-- form -->
-				
-				</div><!-- col -->
-				
-				<div class="col-md-4 fade-up">
-					<h3>Support Us</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				</div><!-- col -->
-
-			</div><!-- row -->
-		
-		</div><!-- container -->
-
-		<div id="footerwrap">
-			<div class="container">
-				<div class="btt-wrapper fade-down"><a class="btt-link smoothScroll" href="#home"><i class="el-icon-chevron-up"></i></a></div>
-				<ul id="footer-social" class="fade-down">
-					<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-twitter"></i></a></li>
-					<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-facebook"></i></a></li>
-					<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-googleplus"></i></a></li>
-					<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-flickr"></i></a></li>
-					<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-youtube"></i></a></li>
-					<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-rss"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
-  </body>
+</body>
 </html>
