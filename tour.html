@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Tour</title>
+</head>
+
+<style>
+body {
+background-color: powderblue;
+}
+
+h1 {
+color: blue;
+}
+
+p {
+color: red;
+}
+</style>
+<body>
+<h1>WelCome to Tour Page????
+</h1>
+<br />
+<br />
+<img src="Web address of Images" alt="Image Name" style="width:304px;height:228px;">
+<p>
+<a>
+Click <a href="VantaBlvck.html" color="FF00CC">here</a> to go to Home Page.
+</a>
+</p>
+<h3>Tour Date field</h3>
+
+<input type="date" id="tourDate" value="2017-07-21">
+
+<p>Click the button to get the date of the date field.</p>
+
+<button onclick="myFunction()">Check Tour date</button>
+
+<p id="tourdem"></p>
+
+<script>
+function myFunction() {
+var x = document.getElementById("tourDate").value;
+document.getElementById("tourdem").innerHTML = x;
+}
+</script>
+</body>
+</html>
